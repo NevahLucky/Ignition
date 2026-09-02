@@ -22,7 +22,7 @@ a tachometer. All pure SVG/CSS — no extra assets, and animations respect
    pool"); add the amount to the flyer/apply sections when announced
 5. **Event year** — dates are shown without a year (source materials say
    September 18, a Thursday); add the year if you want it explicit
-6. Confirm Tillman Hall Room 160 booking and the September 10 deadline
+6. Confirm Tillman Hall Room 160 booking and the September 15 deadline
 
 ## Files
 

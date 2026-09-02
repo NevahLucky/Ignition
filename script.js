@@ -59,7 +59,7 @@ function renderCompetitors() {
         <article class="team-card open-slot">
           <span class="team-badge">Spot open</span>
           <h3>Your team here</h3>
-          <p class="tagline">Apply by September 10 and take the stage at Ignition.</p>
+          <p class="tagline">Apply by September 15 and take the stage at Ignition.</p>
           <p class="members">Cofounders welcome · Equity-free</p>
           <a class="btn btn-primary btn-sm" data-apply href="#apply">Apply to pitch</a>
         </article>`;

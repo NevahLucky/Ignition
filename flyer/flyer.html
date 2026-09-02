@@ -14,10 +14,11 @@
     .flyer { box-shadow: none; }
   }
 
+  /* Three-color discipline: orange background, beige accent, purple ink */
   :root {
-    --orange: #E57326; --orange-bright: #F08A3C; --orange-deep: #C4550E; --orange-dark: #9C3F07;
-    --beige: #F1EDE4; --cream: #FBF8F1; --sand: #E5DCC9;
-    --purple: #522D7D; --purple-deep: #3A1F5C;
+    --orange: #E57326;
+    --beige:  #F1EDE4;
+    --purple: #3A1F5C;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,11 +32,8 @@
     width: 8.5in; height: 11in;
     margin: 0 auto;
     position: relative; overflow: hidden;
-    background:
-      radial-gradient(900px 500px at 88% -6%, rgba(241,237,228,0.26), transparent 70%),
-      radial-gradient(800px 520px at -10% 108%, rgba(255,255,255,0.10), transparent 65%),
-      linear-gradient(180deg, var(--orange) 0%, var(--orange-bright) 55%, var(--orange) 100%);
-    color: var(--purple-deep);
+    background: var(--orange);
+    color: var(--purple);
     box-shadow: 0 14px 40px rgba(46,26,71,0.3);
   }
 
@@ -54,7 +52,7 @@
   /* ---------- Header ---------- */
   header {
     display: flex; justify-content: space-between; align-items: center;
-    border-bottom: 1px solid rgba(241,237,228,0.35);
+    border-bottom: 1px solid rgba(241,237,228,0.4);
     padding-bottom: 10px;
   }
   .brand { display: flex; align-items: center; gap: 8px; color: var(--beige); font-weight: 700; letter-spacing: 0.16em; font-size: 13px; }
@@ -69,13 +67,13 @@
   }
   .engine-lockup { display: inline-block; position: relative; }
   .pistons { display: block; width: 210px; height: auto; margin: 0 0 -5px 7%; position: relative; z-index: 0; }
-  .pistons .rod { fill: var(--purple-deep); }
+  .pistons .rod { fill: var(--purple); }
   .pistons .head { fill: var(--beige); }
-  .pistons .ring { fill: var(--orange-deep); opacity: 0.85; }
+  .pistons .ring { fill: var(--purple); opacity: 0.85; }
   .pistons .ring.r2 { opacity: 0.55; }
   .engine-plate {
     position: relative; z-index: 1; display: inline-block;
-    background: linear-gradient(180deg, #5B3A85 0%, var(--purple-deep) 100%);
+    background: var(--purple);
     border: 2px solid rgba(241,237,228,0.30);
     border-radius: 16px;
     padding: 10px 30px 14px;
@@ -86,7 +84,7 @@
     letter-spacing: 0.04em; line-height: 1;
     text-shadow: 0 2px 0 rgba(0,0,0,0.45), 0 -1px 0 rgba(255,255,255,0.15);
   }
-  .engine-plate .dot { color: var(--orange-bright); }
+  .engine-plate .dot { color: var(--orange); }
   .engine-plate::before, .engine-plate::after {
     content: ""; position: absolute; left: 14px; right: 14px; height: 6px; border-radius: 3px;
     background: repeating-linear-gradient(90deg, rgba(241,237,228,0.35) 0 6px, transparent 6px 13px);
@@ -95,13 +93,13 @@
   .engine-plate::after { bottom: -10px; }
   .bolt {
     position: absolute; width: 8px; height: 8px; border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, var(--cream), var(--sand) 60%, #B9AC8F);
+    background: var(--beige);
     box-shadow: inset 0 -1px 2px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.4);
   }
   .b1 { top: 8px; left: 8px; } .b2 { top: 8px; right: 8px; }
   .b3 { bottom: 8px; left: 8px; } .b4 { bottom: 8px; right: 8px; }
 
-  .tagline { margin-top: 14px; font-size: 21px; font-weight: 600; color: #FFFFFF; }
+  .tagline { margin-top: 14px; font-size: 21px; font-weight: 600; color: var(--beige); }
   .hook { margin-top: 5px; font-size: 13px; color: var(--beige); }
 
   /* ---------- Meta cards ---------- */
@@ -111,27 +109,27 @@
     box-shadow: 0 4px 12px rgba(58,31,92,0.18);
     text-align: center;
   }
-  .meta-card .k { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange-deep); font-weight: 700; }
-  .meta-card .v { font-size: 16.5px; font-weight: 700; color: var(--purple-deep); margin-top: 2px; }
-  .meta-card .s { font-size: 10.5px; color: var(--purple-deep); opacity: 0.72; }
+  .meta-card .k { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purple); opacity: 0.65; font-weight: 700; }
+  .meta-card .v { font-size: 16.5px; font-weight: 700; color: var(--purple); margin-top: 2px; }
+  .meta-card .s { font-size: 10.5px; color: var(--purple); opacity: 0.72; }
 
   /* ---------- QR band ---------- */
   .qr-band {
     display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
     margin-top: 16px;
-    background: var(--cream);
+    background: var(--beige);
     border-radius: 16px;
     padding: 14px;
     box-shadow: 0 6px 18px rgba(58,31,92,0.2);
   }
   .qr-card { display: flex; align-items: center; gap: 14px; padding: 0 6px; }
-  .qr-card + .qr-card { border-left: 2px dashed var(--sand); padding-left: 18px; }
+  .qr-card + .qr-card { border-left: 2px dashed rgba(58,31,92,0.3); padding-left: 18px; }
   .qr-card img { width: 158px; height: 158px; border-radius: 10px; }
   .qr-info h3 { font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
-  .qr-info .apply { color: var(--orange-deep); }
+  .qr-info .apply { color: var(--purple); }
   .qr-info .rsvp { color: var(--purple); }
-  .qr-info p { font-size: 11px; color: var(--ink, #2E1A47); opacity: 0.8; margin-top: 4px; line-height: 1.45; }
-  .qr-info .due { font-weight: 700; color: var(--purple-deep); }
+  .qr-info p { font-size: 11px; color: var(--purple); opacity: 0.85; margin-top: 4px; line-height: 1.45; }
+  .qr-info .due { font-weight: 700; }
 
   /* ---------- Rules columns ---------- */
   .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 18px; }
@@ -139,7 +137,6 @@
     font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
     color: var(--beige); margin-bottom: 7px; font-weight: 700;
   }
-  .rules h3 span { color: var(--purple-deep); }
   .rules ul { list-style: none; }
   .rules li {
     position: relative; padding-left: 15px;
@@ -149,23 +146,23 @@
   .rules li::before {
     content: ""; position: absolute; left: 0; top: 6px;
     width: 6px; height: 6px; border-radius: 50%;
-    background: var(--purple-deep);
+    background: var(--purple);
   }
-  .rules li strong { color: #FFFFFF; }
+  .rules li strong { color: inherit; }
 
   /* ---------- Prize strip ---------- */
   .prize {
     margin-top: 16px;
-    background: linear-gradient(135deg, var(--purple) 0%, var(--purple-deep) 100%);
+    background: var(--purple);
     border-radius: 14px;
     padding: 12px 20px;
     display: flex; align-items: center; justify-content: space-between;
     box-shadow: 0 8px 20px rgba(58,31,92,0.3);
   }
-  .prize .label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange-bright); font-weight: 700; }
+  .prize .label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--beige); font-weight: 700; }
   .prize .amount { font-size: 19px; font-weight: 700; color: var(--beige); margin-top: 1px; }
   .prize .note { font-size: 11px; color: rgba(241,237,228,0.85); text-align: right; line-height: 1.45; max-width: 46%; }
-  .prize .note strong { color: #FFFFFF; }
+  .prize .note strong { color: inherit; }
 
   /* ---------- Footer ---------- */
   footer {
@@ -175,7 +172,7 @@
     display: flex; justify-content: space-between; align-items: center;
     font-size: 11px; color: var(--beige);
   }
-  footer .ig { font-weight: 700; color: #FFFFFF; }
+  footer .ig { font-weight: 700; color: var(--beige); }
 </style>
 </head>
 <body>
@@ -186,7 +183,7 @@
     <div class="content">
       <header>
         <div class="brand">
-          <svg class="mark" viewBox="0 0 40 60" aria-hidden="true"><g><rect x="4" y="6" width="32" height="16" rx="4" fill="currentColor"/><rect x="4" y="11" width="32" height="2.6" fill="#C4550E" opacity="0.85"/><rect x="4" y="17" width="32" height="2.6" fill="#C4550E" opacity="0.55"/><rect x="15.5" y="22" width="9" height="38" rx="3" fill="#3A1F5C"/></g></svg>
+          <svg class="mark" viewBox="0 0 40 60" aria-hidden="true"><g><rect x="4" y="6" width="32" height="16" rx="4" fill="currentColor"/><rect x="4" y="11" width="32" height="2.6" fill="#3A1F5C" opacity="0.8"/><rect x="4" y="17" width="32" height="2.6" fill="#3A1F5C" opacity="0.6"/><rect x="15.5" y="22" width="9" height="38" rx="3" fill="#3A1F5C"/></g></svg>
           CLEMSON BUILD
         </div>
         <div class="h-right">Pitch Competition · Fall</div>
@@ -220,7 +217,7 @@
           <img src="qr-apply.png" alt="QR code — apply to pitch" />
           <div class="qr-info">
             <h3 class="apply">Scan to Apply</h3>
-            <p>Pitch your real business for a share of the prize pool. <span class="due">Applications close September 10</span> — spots are limited.</p>
+            <p>Pitch your real business for a share of the prize pool. <span class="due">Applications close September 15</span> — spots are limited.</p>
           </div>
         </div>
         <div class="qr-card">
