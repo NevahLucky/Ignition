@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="8.5in" height="11in"
+     viewBox="0 0 816 1056"
+     font-family="Helvetica, Arial, sans-serif">
+
+  <!-- =================== Definitions =================== -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#1C2541"/>
+    </linearGradient>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#F2A93B"/>
+      <stop offset="100%" stop-color="#5BC0BE"/>
+    </linearGradient>
+    <linearGradient id="prizeGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#F2A93B" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#5BC0BE" stop-opacity="0.15"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#F2A93B" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#F2A93B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#5BC0BE" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#5BC0BE" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none"
+            stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- =================== Background =================== -->
+  <rect width="816" height="1056" fill="url(#bgGrad)"/>
+  <rect width="816" height="1056" fill="url(#grid)"/>
+  <ellipse cx="700" cy="120" rx="350" ry="350" fill="url(#glowA)"/>
+  <ellipse cx="120" cy="980" rx="350" ry="350" fill="url(#glowB)"/>
+
+  <!-- =================== Content padding =================== -->
+  <!-- 0.7in left/right ≈ 67px, 0.6in top/bottom ≈ 58px -->
+
+  <!-- =================== Header =================== -->
+  <g transform="translate(67,72)">
+    <!-- Logo mark -->
+    <rect x="0" y="0" width="44" height="44" rx="10" fill="url(#logoGrad)"/>
+    <text x="22" y="30" font-size="20" font-weight="900"
+          text-anchor="middle" fill="#0B132B">CB</text>
+
+    <!-- Brand text -->
+    <text x="58" y="20" font-size="20" font-weight="800" fill="#ffffff">Clemson Build</text>
+    <text x="58" y="40" font-size="11" letter-spacing="2" fill="#B8C1D1">
+      STUDENT ENTREPRENEURSHIP COMMUNITY
+    </text>
+
+    <!-- Right tag -->
+    <text x="682" y="28" text-anchor="end" font-size="11" letter-spacing="2"
+          fill="#B8C1D1">PITCH COMPETITION 2025</text>
+
+    <!-- Divider -->
+    <line x1="0" y1="62" x2="682" y2="62"
+          stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+  </g>
+
+  <!-- =================== Hero =================== -->
+  <g transform="translate(67,180)">
+    <text x="0" y="0" font-size="13" letter-spacing="4" font-weight="700"
+          fill="#F2A93B">FOUNDERS · PITCH · WIN</text>
+
+    <text x="0" y="70"  font-size="64" font-weight="900" letter-spacing="-1.5" fill="#ffffff">Build It.</text>
+    <text x="0" y="138" font-size="64" font-weight="900" letter-spacing="-1.5" fill="#F2A93B">Pitch It.</text>
+    <text x="0" y="206" font-size="64" font-weight="900" letter-spacing="-1.5" fill="#ffffff">Win It.</text>
+
+    <text x="0" y="248" font-size="14" fill="#B8C1D1">
+      Clemson Build brings together a supportive community of student founders and builders.
+    </text>
+    <text x="0" y="266" font-size="14" fill="#B8C1D1">
+      Bring your cofounders, sharpen your story, and pitch a real business for a shot at the prize pool.
+    </text>
+  </g>
+
+  <!-- =================== Event Meta =================== -->
+  <g transform="translate(67,500)">
+    <!-- Card 1: Date -->
+    <rect x="0"   y="0" width="220" height="86" rx="10"
+          fill="#ffffff" fill-opacity="0.06"
+          stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="14" y="22" font-size="10" letter-spacing="2" fill="#B8C1D1">DATE</text>
+    <text x="14" y="50" font-size="20" font-weight="800" fill="#ffffff">Sept 18</text>
+    <text x="14" y="72" font-size="12" fill="#B8C1D1">Thursday</text>
+
+    <!-- Card 2: Time -->
+    <rect x="232" y="0" width="220" height="86" rx="10"
+          fill="#ffffff" fill-opacity="0.06"
+          stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="246" y="22" font-size="10" letter-spacing="2" fill="#B8C1D1">TIME</text>
+    <text x="246" y="50" font-size="20" font-weight="800" fill="#ffffff">3:00 – 6:00 PM</text>
+    <text x="246" y="72" font-size="12" fill="#B8C1D1">3 hours · 1 round</text>
+
+    <!-- Card 3: Format -->
+    <rect x="464" y="0" width="218" height="86" rx="10"
+          fill="#ffffff" fill-opacity="0.06"
+          stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="478" y="22" font-size="10" letter-spacing="2" fill="#B8C1D1">FORMAT</text>
+    <text x="478" y="50" font-size="20" font-weight="800" fill="#ffffff">Live Pitch</text>
+    <text x="478" y="72" font-size="12" fill="#B8C1D1">Co-founders encouraged</text>
+  </g>
+
+  <!-- =================== Prize Block =================== -->
+  <g transform="translate(67,620)">
+    <rect x="0" y="0" width="682" height="130" rx="14"
+          fill="url(#prizeGrad)"
+          stroke="#F2A93B" stroke-opacity="0.35"/>
+
+    <text x="26" y="36" font-size="11" letter-spacing="3" font-weight="700"
+          fill="#F2A93B">PRIZE POOL</text>
+    <text x="26" y="92" font-size="56" font-weight="900" letter-spacing="-1" fill="#ffffff">$ — TBD</text>
+    <text x="26" y="115" font-size="12" fill="#B8C1D1">
+      Awarded to the top performing pitch
+    </text>
+
+    <!-- Right side note -->
+    <text x="656" y="36" text-anchor="end" font-size="11" fill="#B8C1D1">
+      Prize amount and structure will be
+    </text>
+    <text x="656" y="52" text-anchor="end" font-size="11" fill="#B8C1D1">
+      announced one week prior to the event.
+    </text>
+    <text x="656" y="74" text-anchor="end" font-size="11" fill="#B8C1D1">
+      Follow
+    </text>
+    <text x="656" y="92" text-anchor="end" font-size="12" font-weight="700" fill="#ffffff">
+      @clemson.build
+    </text>
+    <text x="656" y="108" text-anchor="end" font-size="11" fill="#B8C1D1">
+      on Instagram for updates.
+    </text>
+  </g>
+
+  <!-- =================== Rules + Audience =================== -->
+  <g transform="translate(67,790)">
+    <!-- Who can pitch -->
+    <text x="0" y="0" font-size="13" letter-spacing="2" font-weight="700" fill="#ffffff">
+      <tspan fill="#F2A93B">WHO</tspan> CAN PITCH
+    </text>
+    <g font-size="13" fill="#B8C1D1">
+      <circle cx="6" cy="28" r="3" fill="#5BC0BE"/>
+      <text x="18" y="32">Open to all Clemson student founders</text>
+      <circle cx="6" cy="50" r="3" fill="#5BC0BE"/>
+      <text x="18" y="54">Co-founders are encouraged to present together</text>
+      <circle cx="6" cy="72" r="3" fill="#5BC0BE"/>
+      <text x="18" y="76">Open to all majors — builders, not just ideas</text>
+    </g>
+
+    <!-- Rules -->
+    <text x="350" y="0" font-size="13" letter-spacing="2" font-weight="700" fill="#ffffff">
+      <tspan fill="#F2A93B">RULES</tspan> &amp; ELIGIBILITY
+    </text>
+    <g font-size="13" fill="#B8C1D1">
+      <circle cx="356" cy="28" r="3" fill="#5BC0BE"/>
+      <text x="368" y="32">Real businesses only — no concept-only pitches</text>
+      <circle cx="356" cy="50" r="3" fill="#5BC0BE"/>
+      <text x="368" y="54">Equity-free: students retain full ownership</text>
+      <circle cx="356" cy="72" r="3" fill="#5BC0BE"/>
+      <text x="368" y="76">Judged on traction, clarity, and impact</text>
+      <circle cx="356" cy="94" r="3" fill="#5BC0BE"/>
+      <text x="368" y="98">Limited slots — apply early</text>
+    </g>
+  </g>
+
+  <!-- =================== Footer =================== -->
+  <g transform="translate(67,948)">
+    <line x1="0" y1="0" x2="682" y2="0"
+          stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+
+    <!-- CTA Button -->
+    <rect x="0" y="20" width="170" height="42" rx="8" fill="#F2A93B"/>
+    <text x="85" y="46" text-anchor="middle" font-size="12" font-weight="800"
+          letter-spacing="1.5" fill="#0B132B">RSVP — LINK TBD</text>
+
+    <!-- Contact info -->
+    <text x="186" y="36" font-size="12" font-weight="700" fill="#ffffff">Questions?</text>
+    <text x="186" y="54" font-size="12" fill="#B8C1D1">clemsonbuild@gmail.com</text>
+
+    <!-- Handles -->
+    <text x="682" y="36" text-anchor="end" font-size="12" fill="#B8C1D1">Follow &amp; apply</text>
+    <text x="682" y="54" text-anchor="end" font-size="12" font-weight="700" fill="#F2A93B">@clemson.build</text>
+    <text x="682" y="70" text-anchor="end" font-size="11" fill="#B8C1D1">on Instagram</text>
+  </g>
+
+</svg>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Clemson Build — Pitch Competition</title>
+<style>
+  /* ---------- Print setup ---------- */
+  @page {
+    size: 8.5in 11in;
+    margin: 0;
+  }
+  @media print {
+    html, body { margin: 0; padding: 0; }
+    .flyer { box-shadow: none; }
+  }
+
+  /* ---------- Base ---------- */
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #e9ecef;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ---------- Flyer container (exact print size) ---------- */
+  .flyer {
+    width: 8.5in;
+    height: 11in;
+    margin: 20px auto;
+    background: #0B132B;          /* Deep navy */
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  }
+
+  /* ---------- Accent ---------- */
+  :root {
+    --accent: #F2A93B;            /* Warm amber accent */
+    --accent-2: #5BC0BE;          /* Teal accent */
+    --muted: #B8C1D1;
+  }
+
+  /* ---------- Background geometry ---------- */
+  .bg-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+  }
+  .glow {
+    position: absolute;
+    width: 8in; height: 8in;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+    z-index: 0;
+  }
+  .glow.a { background: var(--accent);   top: -3in;  right: -3in; }
+  .glow.b { background: var(--accent-2); bottom: -3in; left: -3in; opacity: 0.25; }
+
+  /* ---------- Content stack ---------- */
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 0.6in 0.7in;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    padding-bottom: 14px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+  }
+  .logo-mark {
+    width: 34px; height: 34px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    display: flex; align-items: center; justify-content: center;
+    color: #0B132B;
+    font-weight: 900;
+    font-size: 18px;
+  }
+  .tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--muted);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    margin-top: 0.35in;
+  }
+  .eyebrow {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 64px;
+    line-height: 1.0;
+    margin: 14px 0 6px 0;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+  }
+  h1 .pop { color: var(--accent); }
+  .sub {
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 6.6in;
+    line-height: 1.5;
+  }
+
+  /* ---------- Event meta strip ---------- */
+  .meta {
+    margin-top: 0.35in;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .meta-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 14px 14px 12px;
+  }
+  .meta-card .k {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .meta-card .v {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .meta-card .s {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ---------- Prize block ---------- */
+  .prize {
+    margin-top: 0.35in;
+    background: linear-gradient(135deg, rgba(242,169,59,0.15), rgba(91,192,190,0.10));
+    border: 1px solid rgba(242,169,59,0.35);
+    border-radius: 14px;
+    padding: 22px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .prize .left .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .prize .left .amount {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 6px;
+    letter-spacing: -1px;
+  }
+  .prize .left .note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .prize .right {
+    text-align: right;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 2.4in;
+  }
+
+  /* ---------- Rules / Who should pitch ---------- */
+  .rules {
+    margin-top: 0.3in;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .rules h3 {
+    margin: 0 0 8px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+  .rules h3 span { color: var(--accent); }
+  .rules ul {
+    margin: 0; padding: 0; list-style: none;
+    font-size: 12.5px; line-height: 1.55; color: var(--muted);
+  }
+  .rules li {
+    padding-left: 16px;
+    position: relative;
+  }
+  .rules li::before {
+    content: "";
+    position: absolute; left: 0; top: 8px;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent-2);
+  }
+
+  /* ---------- RSVP / Footer ---------- */
+  footer {
+    margin-top: auto;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn {
+    background: var(--accent);
+    color: #0B132B;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .cta .info {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  .cta .info strong { color: #fff; }
+  .handles {
+    text-align: right;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .handles .ig { color: var(--accent); font-weight: 700; }
+</style>
+</head>
+<body>
+  <section class="flyer">
+    <div class="bg-grid"></div>
+    <div class="glow a"></div>
+    <div class="glow b"></div>
+
+    <div class="content">
+
+      <!-- Header / Brand -->
+      <header>
+        <div class="brand">
+          <div class="logo-mark">CB</div>
+          <div>
+            <div>Clemson Build</div>
+            <div class="tag">Student Entrepreneurship Community</div>
+          </div>
+        </div>
+        <div class="tag">Pitch Competition 2025</div>
+      </header>
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="eyebrow">Founders · Pitch · Win</div>
+        <h1>Build It.<br/><span class="pop">Pitch It.</span> Win It.</h1>
+        <p class="sub">
+          Clemson Build brings together a supportive community of student founders and
+          builders. Bring your cofounders, sharpen your story, and pitch a real business
+          for a shot at the prize pool.
+        </p>
+      </div>
+
+      <!-- Event Meta -->
+      <div class="meta">
+        <div class="meta-card">
+          <div class="k">Date</div>
+          <div class="v">Sept 18</div>
+          <div class="s">Thursday</div>
+        </div>
+        <div class="meta-card">
+          <div class="k">Time</div>
+          <div class="v">3:00 – 6:00 PM</div>
+          <div class="s">3 hours · 1 round</div>
+        </div>
+        <div class="meta-card">
+          <div class="k">Format</div>
+          <div class="v">Live Pitch</div>
+          <div class="s">Co-founders encouraged</div>
+        </div>
+      </div>
+
+      <!-- Prize -->
+      <div class="prize">
+        <div class="left">
+          <div class="label">Prize Pool</div>
+          <div class="amount">$ — TBD</div>
+          <div class="note">Awarded to the top performing pitch</div>
+        </div>
+        <div class="right">
+          Prize amount and structure will be announced
+          one week prior to the event. Follow
+          <span style="color:#fff">@clemson.build</span> for updates.
+        </div>
+      </div>
+
+      <!-- Rules + Audience -->
+      <div class="rules">
+        <div>
+          <h3><span>Who</span> can pitch</h3>
+          <ul>
+            <li>Open to all Clemson student founders</li>
+            <li>Co-founders are encouraged to present together</li>
+            <li>Open to all majors — builders, not just ideas</li>
+          </ul>
+        </div>
+        <div>
+          <h3><span>Rules</span> &amp; eligibility</h3>
+          <ul>
+            <li>Real businesses only — no concept-only pitches</li>
+            <li>Equity-free: students retain full ownership</li>
+            <li>Judged on traction, clarity, and impact</li>
+            <li>Limited slots — apply early</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer / CTA -->
+      <footer>
+        <div class="cta">
+          <div class="btn">RSVP — Link TBD</div>
+          <div class="info">
+            <strong>Questions?</strong><br/>
+            clemsonbuild@gmail.com
+          </div>
+        </div>
+        <div class="handles">
+          Follow &amp; apply<br/>
+          <span class="ig">@clemson.build</span> on Instagram
+        </div>
+      </footer>
+
+    </div>
+  </section>
+</body>
+</html>
