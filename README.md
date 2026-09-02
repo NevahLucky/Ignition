@@ -64,3 +64,17 @@ Your site will be live at `https://<your-username>.github.io/Ignition/`
 ---
 
 *Clemson Build — student-run, founder-first.*
+
+## Promotional cover (TigerQuest)
+
+`promo/cover-1920x960.png` is the TigerQuest cover photo (2:1 banner, content
+centered with safe margins for platform cropping). A 16:9 fallback lives at
+`promo/cover-1920x1080.png`. To tweak it, edit `promo/cover.html` and re-render:
+
+```bash
+cd promo
+google-chrome --headless --disable-gpu --hide-scrollbars \
+  --force-device-scale-factor=1 --virtual-time-budget=12000 \
+  --window-size=1920,960 --screenshot=cover-1920x960.png \
+  "file://$PWD/cover.html"
+```
