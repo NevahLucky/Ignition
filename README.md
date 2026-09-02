@@ -32,8 +32,9 @@ a tachometer. All pure SVG/CSS — no extra assets, and animations respect
 | `styles.css` | Theme (orange bg / beige accent / purple ink), responsive |
 | `script.js` | `CONFIG` links + competitor roster rendering + mobile nav |
 | `assets/` | Logo (`logo-web.jpg`), favicon, all derived from `buildlogo.jpeg` |
-| `flyer/flyer.svg` | The promotional flyer, embedded on the page |
-| `flyer/flyer.html` | Printable 8.5×11 version of the flyer |
+| `flyer/flyer-print.png` | The Ignition flyer (8.5×11 render), embedded on the page |
+| `flyer/flyer.html` | Editable 8.5×11 print version (browser-print at full size) |
+| `flyer/qr-apply.png`, `flyer/qr-rsvp.png` | Application (orange) and RSVP (purple) QR codes |
 
 ## Run it locally
 
