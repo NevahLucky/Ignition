@@ -161,16 +161,15 @@
     margin-top: 16px;
     background: var(--purple);
     border-radius: 14px;
-    padding: 15px 20px;
+    padding: 14px 20px;
     display: flex; justify-content: center; text-align: center;
     box-shadow: 0 8px 20px rgba(58,31,92,0.3);
   }
-  .prize .label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--beige); font-weight: 700; }
-  .prize .amount { font-size: 22px; font-weight: 700; color: var(--beige); margin-top: 2px; }
-  .prize .takes {
-    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-    color: rgba(241,237,228,0.85); margin-top: 4px; font-weight: 600;
+  .prize-line {
+    font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--beige); font-weight: 600; white-space: nowrap;
   }
+  .prize-line strong { font-weight: 700; }
 
   /* ---------- Footer ---------- */
   footer {
@@ -257,11 +256,7 @@
       </div>
 
       <div class="prize">
-        <div>
-          <div class="label">Prize Pool</div>
-          <div class="amount">$1K+</div>
-          <div class="takes">Winner Takes All</div>
-        </div>
+        <p class="prize-line"><strong>$1K+</strong> Prize Pool&nbsp;&nbsp;·&nbsp;&nbsp;Winner Takes All</p>
       </div>
 
       <footer>
