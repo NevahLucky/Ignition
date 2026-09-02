@@ -363,3 +363,159 @@ details p { padding: 0 1.3rem 1.1rem; }
   .steps, .team-grid { grid-template-columns: 1fr; }
   .section { padding: 3.2rem 0; }
 }
+
+/* ============================================================
+   ENGINE THEME — pistons, plate, gears, exhaust, tachometer
+   ============================================================ */
+
+/* Sections host decorative gears */
+.hero, .section { position: relative; overflow: hidden; }
+.hero > .container, .section > .container { position: relative; z-index: 1; }
+
+.deco { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.gear {
+  position: absolute;
+  color: rgba(241, 237, 228, 0.11);
+  animation: spin 30s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.hero .g1 { top: -60px; right: -45px; width: 230px; height: 230px; }
+.hero .g2 { bottom: -70px; left: -55px; width: 180px; height: 180px; animation-duration: 38s; animation-direction: reverse; opacity: 0.8; }
+#how .g1 { top: -50px; right: -40px; width: 190px; height: 190px; }
+#club .g1 { top: 40px; right: -65px; width: 210px; height: 210px; color: rgba(229, 115, 38, 0.10); }
+#competitors .g1 { bottom: -60px; left: -50px; width: 190px; height: 190px; }
+#judging .g1 { top: -55px; left: -60px; width: 200px; height: 200px; color: rgba(241, 237, 228, 0.06); }
+#judging .g2 { bottom: -70px; right: -45px; width: 240px; height: 240px; color: rgba(241, 237, 228, 0.06); animation-direction: reverse; animation-duration: 42s; }
+#faq .g1 { top: 30px; right: -70px; width: 200px; height: 200px; color: rgba(229, 115, 38, 0.09); }
+
+/* Tiny gear inside section eyebrows */
+.eg { width: 13px; height: 13px; vertical-align: -1px; margin-right: 7px; animation: spin 16s linear infinite; }
+
+/* ---------------- Engine-lockup title ---------------- */
+.engine-lockup { position: relative; display: inline-block; margin-bottom: 0.5rem; }
+
+/* Pistons sitting on top of the plate */
+.pistons { display: block; width: min(280px, 62vw); height: auto; margin: 0 0 -6px 7%; position: relative; z-index: 0; }
+.pistons .rod { fill: var(--purple-deep); }
+.pistons .head { fill: var(--beige); }
+.pistons .ring { fill: var(--orange-deep); opacity: 0.85; }
+.pistons .ring.r2 { opacity: 0.55; }
+.pistons g { animation: piston-run 1.5s ease-in-out infinite alternate; }
+.pistons g:nth-of-type(2) { animation-delay: 0.25s; }
+.pistons g:nth-of-type(3) { animation-delay: 0.5s; }
+@keyframes piston-run { from { transform: translateY(0); } to { transform: translateY(9px); } }
+
+/* The engine-block nameplate */
+.engine-plate {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background: linear-gradient(180deg, #5B3A85 0%, var(--purple-deep) 100%);
+  border: 2px solid rgba(241, 237, 228, 0.28);
+  border-radius: 20px;
+  padding: 0.16em 0.5em 0.24em;
+  box-shadow:
+    inset 0 3px 8px rgba(0, 0, 0, 0.5),
+    inset 0 -3px 8px rgba(255, 255, 255, 0.06),
+    0 16px 34px rgba(46, 26, 71, 0.35);
+}
+.engine-plate h1 {
+  font-size: clamp(2.4rem, 6.5vw, 4.4rem);
+  font-weight: 700;
+  color: var(--beige);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin: 0;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.45), 0 -1px 0 rgba(255, 255, 255, 0.15);
+}
+.engine-plate .dot { color: var(--orange-bright); }
+/* cooling fins above/below the block */
+.engine-plate::before, .engine-plate::after {
+  content: "";
+  position: absolute;
+  left: 16px; right: 16px;
+  height: 7px;
+  border-radius: 3px;
+  background: repeating-linear-gradient(90deg, rgba(241, 237, 228, 0.35) 0 7px, transparent 7px 15px);
+}
+.engine-plate::before { top: -14px; }
+.engine-plate::after { bottom: -14px; }
+
+/* corner bolts */
+.bolt {
+  position: absolute;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--cream), var(--sand) 60%, #B9AC8F);
+  box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.b1 { top: 9px; left: 9px; }
+.b2 { top: 9px; right: 9px; }
+.b3 { bottom: 9px; left: 9px; }
+.b4 { bottom: 9px; right: 9px; }
+
+/* Exhaust pipe puffing to the right of the plate */
+.exhaust {
+  position: absolute;
+  top: 58%;
+  left: calc(100% + 10px);
+  width: 195px;
+  height: auto;
+}
+.exhaust .pipe { fill: var(--purple-deep); }
+.exhaust .puff { fill: var(--beige); opacity: 0.3; animation: puff 1.8s ease-out infinite; }
+.exhaust .p2 { animation-delay: 0.3s; }
+.exhaust .p3 { animation-delay: 0.6s; }
+@keyframes puff {
+  0%, 100% { opacity: 0.18; transform: translateX(0); }
+  50%      { opacity: 0.55; transform: translateX(7px); }
+}
+
+/* ---------------- Step cards: gear watermark ---------------- */
+.step-card { position: relative; }
+.step-gear {
+  position: absolute;
+  top: -16px; right: -16px;
+  width: 74px; height: 74px;
+  color: var(--purple);
+  opacity: 0.10;
+  animation: spin 44s linear infinite reverse;
+}
+
+/* ---------------- Judging icons ---------------- */
+.crit-svg { width: 46px; height: 46px; color: var(--orange-bright); }
+.spin-slow { animation: spin 18s linear infinite; }
+
+/* ---------------- Tachometer ---------------- */
+.gauge { display: block; width: min(190px, 55%); margin: 0 auto 0.6rem; }
+.g-face { fill: var(--cream); stroke: var(--sand); stroke-width: 3; }
+.g-track { fill: none; stroke: var(--sand); stroke-width: 12; stroke-linecap: round; }
+.g-arc { fill: none; stroke: var(--orange); stroke-width: 12; stroke-linecap: round; }
+.g-hot { fill: none; stroke: var(--purple); stroke-width: 12; stroke-linecap: round; }
+.g-tick { stroke: var(--purple-deep); stroke-width: 3; stroke-linecap: round; }
+.g-label { font-family: var(--font); font-size: 13px; font-weight: 700; letter-spacing: 3px; fill: var(--purple); text-anchor: middle; }
+.g-needle {
+  stroke: var(--purple-deep); stroke-width: 6; stroke-linecap: round;
+  transform-box: view-box; transform-origin: 100px 104px;
+  animation: rev 2.2s ease-in-out infinite alternate;
+}
+@keyframes rev { from { transform: rotate(-5deg); } to { transform: rotate(3deg); } }
+.g-cap { fill: var(--purple-deep); }
+.g-cap-dot { fill: var(--beige); }
+.gauge-caption { font-size: 0.92rem !important; margin-bottom: 1.2rem !important; opacity: 0.8; }
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 1150px) {
+  .exhaust { display: none; }
+}
+@media (max-width: 900px) {
+  .pistons { width: min(220px, 52vw); }
+  .gear { opacity: 0.9; }
+  .hero .g1 { width: 160px; height: 160px; }
+}
+
+/* Respect users who prefer stillness */
+@media (prefers-reduced-motion: reduce) {
+  .gear, .eg, .pistons g, .exhaust .puff, .spin-slow, .step-gear, .g-needle { animation: none !important; }
+}

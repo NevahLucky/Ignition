@@ -6,6 +6,11 @@ the competitors, and the judging criteria.
 
 **Design:** palette pulled from `buildlogo.jpeg` — orange `#E57326` as the
 main background, beige `#F1EDE4` as the accent, purple `#522D7D` as ink.
+**Engine theme:** the title is an engine-block nameplate (stamped letters,
+corner bolts, cooling fins) with animated pistons above and an exhaust pipe
+beside it; rotating gears decorate the sections, and the apply card carries
+a tachometer. All pure SVG/CSS — no extra assets, and animations respect
+`prefers-reduced-motion`.
 
 ## Publish checklist (do this before going live)
 
