@@ -161,14 +161,16 @@
     margin-top: 16px;
     background: var(--purple);
     border-radius: 14px;
-    padding: 12px 20px;
-    display: flex; align-items: center; justify-content: space-between;
+    padding: 15px 20px;
+    display: flex; justify-content: center; text-align: center;
     box-shadow: 0 8px 20px rgba(58,31,92,0.3);
   }
   .prize .label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--beige); font-weight: 700; }
-  .prize .amount { font-size: 19px; font-weight: 700; color: var(--beige); margin-top: 1px; }
-  .prize .note { font-size: 11px; color: rgba(241,237,228,0.85); text-align: right; line-height: 1.45; max-width: 46%; }
-  .prize .note strong { color: inherit; }
+  .prize .amount { font-size: 22px; font-weight: 700; color: var(--beige); margin-top: 2px; }
+  .prize .takes {
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(241,237,228,0.85); margin-top: 4px; font-weight: 600;
+  }
 
   /* ---------- Footer ---------- */
   footer {
@@ -257,9 +259,9 @@
       <div class="prize">
         <div>
           <div class="label">Prize Pool</div>
-          <div class="amount">$1K+ — winner takes it</div>
+          <div class="amount">$1K+</div>
+          <div class="takes">Winner Takes All</div>
         </div>
-        <div class="note">Equity-free: the winner keeps 100% of what they build.</div>
       </div>
 
       <footer>
