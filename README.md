@@ -67,14 +67,21 @@ Your site will be live at `https://<your-username>.github.io/Ignition/`
 
 ## Promotional cover (TigerQuest)
 
-`promo/cover-1920x960.png` is the TigerQuest cover photo (2:1 banner, content
-centered with safe margins for platform cropping). A 16:9 fallback lives at
-`promo/cover-1920x1080.png`. To tweak it, edit `promo/cover.html` and re-render:
+TigerQuest crops every Event Cover Photo to **1.67:1** (min 1300×780, ≤10MB),
+so both covers are composed at exactly that ratio — no content is lost to the
+crop:
+
+- `promo/cover-tigerquest.png` — **recommended upload**: engine lockup +
+  tagline + date/time/location chips (1920×1152, ~264 KB PNG)
+- `promo/cover-tigerquest-notext.png` — text-free variant per the platform's
+  "avoid text or logos" guidance; engine lockup only
+
+Edit `promo/cover.html` (or `cover-notext.html`) and re-render:
 
 ```bash
 cd promo
 google-chrome --headless --disable-gpu --hide-scrollbars \
   --force-device-scale-factor=1 --virtual-time-budget=12000 \
-  --window-size=1920,960 --screenshot=cover-1920x960.png \
+  --window-size=1920,1152 --screenshot=cover-tigerquest.png \
   "file://$PWD/cover.html"
 ```

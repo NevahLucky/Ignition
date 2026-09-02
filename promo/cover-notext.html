@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --orange: #E57326; --orange-bright: #F08A3C; --orange-deep: #C4550E;
+    --beige: #F1EDE4; --cream: #FBF8F1; --sand: #E5DCC9;
+    --purple: #522D7D; --purple-deep: #3A1F5C;
+    --font: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; }
+  body {
+    font-family: var(--font);
+    background:
+      radial-gradient(1100px 600px at 88% -10%, rgba(241,237,228,0.26), transparent 70%),
+      radial-gradient(900px 600px at -8% 110%, rgba(255,255,255,0.10), transparent 65%),
+      linear-gradient(180deg, var(--orange) 0%, var(--orange-bright) 55%, var(--orange) 100%);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    color: var(--beige);
+  }
+
+  /* faint gears, corners only */
+  .gear { position: absolute; color: rgba(241,237,228,0.10); }
+  .g1 { top: -90px; right: -80px; width: 380px; height: 380px; }
+  .g2 { bottom: -110px; left: -70px; width: 300px; height: 300px; opacity: 0.8; }
+
+  .stack { text-align: center; position: relative; z-index: 1; padding: 48px; }
+
+
+  .engine-lockup { display: inline-block; position: relative; }
+  .pistons { display: block; width: 380px; height: auto; margin: 0 0 -7px 7%; position: relative; z-index: 0; }
+  .pistons .rod { fill: var(--purple-deep); }
+  .pistons .head { fill: var(--beige); }
+  .pistons .ring { fill: var(--orange-deep); opacity: 0.85; }
+  .pistons .ring.r2 { opacity: 0.55; }
+
+  .engine-plate {
+    position: relative; z-index: 1; display: inline-block;
+    background: linear-gradient(180deg, #5B3A85 0%, var(--purple-deep) 100%);
+    border: 3px solid rgba(241,237,228,0.30);
+    border-radius: 28px;
+    padding: 26px 58px 34px;
+    box-shadow: inset 0 4px 12px rgba(0,0,0,0.5), inset 0 -4px 12px rgba(255,255,255,0.06), 0 24px 50px rgba(46,26,71,0.35);
+  }
+  .engine-plate h1 {
+    font-size: 158px; font-weight: 700; color: var(--beige);
+    letter-spacing: 0.04em; line-height: 1;
+    text-shadow: 0 3px 0 rgba(0,0,0,0.45), 0 -1px 0 rgba(255,255,255,0.15);
+  }
+  .engine-plate .dot { color: var(--orange-bright); }
+  .engine-plate::before, .engine-plate::after {
+    content: ""; position: absolute; left: 26px; right: 26px; height: 10px; border-radius: 5px;
+    background: repeating-linear-gradient(90deg, rgba(241,237,228,0.35) 0 10px, transparent 10px 22px);
+  }
+  .engine-plate::before { top: -19px; }
+  .engine-plate::after { bottom: -19px; }
+  .bolt {
+    position: absolute; width: 16px; height: 16px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--cream), var(--sand) 60%, #B9AC8F);
+    box-shadow: inset 0 -2px 3px rgba(0,0,0,0.35), 0 2px 3px rgba(0,0,0,0.4);
+  }
+  .b1 { top: 13px; left: 13px; } .b2 { top: 13px; right: 13px; }
+  .b3 { bottom: 13px; left: 13px; } .b4 { bottom: 13px; right: 13px; }
+
+</style>
+</head>
+<body>
+  <svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="nonzero" d="M50 4 A46 46 0 1 1 50 96 A46 46 0 1 1 50 4 Z M50 39 A11 11 0 1 0 50 61 A11 11 0 1 0 50 39 Z"/><g fill="currentColor"><rect x="43" y="0" width="14" height="20" rx="4"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(45 50 50)"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(90 50 50)"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(135 50 50)"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(180 50 50)"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(225 50 50)"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(270 50 50)"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(315 50 50)"/></g></svg>
+  <svg class="gear g2" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="nonzero" d="M50 4 A46 46 0 1 1 50 96 A46 46 0 1 1 50 4 Z M50 39 A11 11 0 1 0 50 61 A11 11 0 1 0 50 39 Z"/><g fill="currentColor"><rect x="43" y="0" width="14" height="20" rx="4"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(45 50 50)"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(90 50 50)"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(135 50 50)"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(180 50 50)"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(225 50 50)"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(270 50 50)"/><rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(315 50 50)"/></g></svg>
+
+  <div class="stack">
+    <div class="engine-lockup">
+      <svg class="pistons" viewBox="0 0 300 92" aria-hidden="true">
+        <g><rect class="rod" x="56" y="36" width="9" height="56" rx="3"/><rect class="head" x="36" y="16" width="49" height="22" rx="5"/><rect class="ring" x="36" y="22" width="49" height="3.5"/><rect class="ring r2" x="36" y="29" width="49" height="3.5"/></g>
+        <g><rect class="rod" x="146" y="24" width="9" height="68" rx="3"/><rect class="head" x="126" y="4" width="49" height="22" rx="5"/><rect class="ring" x="126" y="10" width="49" height="3.5"/><rect class="ring r2" x="126" y="17" width="49" height="3.5"/></g>
+        <g><rect class="rod" x="236" y="30" width="9" height="62" rx="3"/><rect class="head" x="216" y="10" width="49" height="22" rx="5"/><rect class="ring" x="216" y="16" width="49" height="3.5"/><rect class="ring r2" x="216" y="23" width="49" height="3.5"/></g>
+      </svg>
+      <div class="engine-plate">
+        <span class="bolt b1"></span><span class="bolt b2"></span><span class="bolt b3"></span><span class="bolt b4"></span>
+        <h1>IGNITION<span class="dot">.</span></h1>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
