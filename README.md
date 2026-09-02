@@ -18,8 +18,8 @@ a tachometer. All pure SVG/CSS — no extra assets, and animations respect
 2. **Spectator RSVP link** — `script.js`, `CONFIG.RSVP_URL`
 3. **Competitors** — replace the placeholder entries in the `COMPETITORS`
    array in `script.js` (keep the `openSlot` card until the field is full)
-4. **Prize pool** — currently described generically ("a share of the prize
-   pool"); add the amount to the flyer/apply sections when announced
+4. **Prize pool** — set to **$1K+, winner takes the pool**; reflected on the
+   flyer and site hero
 5. **Event year** — dates are shown without a year (source materials say
    September 18, a Thursday); add the year if you want it explicit
 6. Confirm Tillman Hall Room 160 booking and the September 15 deadline
