@@ -17,38 +17,63 @@
 
 	<body>
 
-<!-- ============ SVG symbol library (engine icons) ============ -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <symbol id="gear" viewBox="0 0 100 100">
-      <path fill="currentColor" fill-rule="nonzero" d="M50 4 A46 46 0 1 1 50 96 A46 46 0 1 1 50 4 Z M50 39 A11 11 0 1 0 50 61 A11 11 0 1 0 50 39 Z"/>
-      <g fill="currentColor">
-        <rect x="43" y="0" width="14" height="20" rx="4"/>
-        <rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(45 50 50)"/>
-        <rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(90 50 50)"/>
-        <rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(135 50 50)"/>
-        <rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(180 50 50)"/>
-        <rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(225 50 50)"/>
-        <rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(270 50 50)"/>
-        <rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(315 50 50)"/>
-      </g>
-    </symbol>
-    <symbol id="spark" viewBox="0 0 40 40">
-      <g fill="currentColor">
-        <rect x="16" y="1" width="8" height="7" rx="2"/>
-        <rect x="13" y="9" width="14" height="11" rx="2"/>
-        <rect x="15" y="21" width="10" height="7" rx="1"/>
-        <rect x="18" y="29" width="4" height="5"/>
-        <path d="M17 35h6l-3 5z"/>
-      </g>
-    </symbol>
-    <symbol id="rocket" viewBox="0 0 40 40">
-      <path fill="currentColor" fill-rule="evenodd" d="M20 1c5.5 4.5 7.5 11 5.5 18.5L20 25l-5.5-5.5C12.5 12 14.5 5.5 20 1z M20 10.5a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"/>
-      <path fill="currentColor" d="M13.6 20.5 7 27l7.2-1.6zM26.4 20.5 33 27l-7.2-1.6z"/>
-      <path fill="currentColor" d="M20 30c1.8 1.6 2.6 4 2.2 6.5L20 39l-2.2-2.5C17.4 31.6 18.2 31.6 20 30z"/>
-    </symbol>
-  </defs>
-</svg>
+		<!-- ============ SVG symbol library (engine icons) ============ -->
+		<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+			<defs>
+				<symbol id="gear" viewBox="0 0 100 100">
+					<path fill="currentColor" fill-rule="nonzero"
+						d="M50 4 A46 46 0 1 1 50 96 A46 46 0 1 1 50 4 Z M50 39 A11 11 0 1 0 50 61 A11 11 0 1 0 50 39 Z" />
+					<g fill="currentColor">
+						<rect x="43" y="0" width="14" height="20" rx="4" />
+						<rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(45 50 50)" />
+						<rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(90 50 50)" />
+						<rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(135 50 50)" />
+						<rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(180 50 50)" />
+						<rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(225 50 50)" />
+						<rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(270 50 50)" />
+						<rect x="43" y="0" width="14" height="20" rx="4" transform="rotate(315 50 50)" />
+					</g>
+				</symbol>
+				<symbol id="spark" viewBox="0 0 40 40">
+					<g fill="currentColor">
+						<rect x="16" y="1" width="8" height="7" rx="2" />
+						<rect x="13" y="9" width="14" height="11" rx="2" />
+						<rect x="15" y="21" width="10" height="7" rx="1" />
+						<rect x="18" y="29" width="4" height="5" />
+						<path d="M17 35h6l-3 5z" />
+					</g>
+				</symbol>
+				<symbol id="rocket" viewBox="0 0 40 40">
+					<path fill="currentColor" fill-rule="evenodd"
+						d="M20 1c5.5 4.5 7.5 11 5.5 18.5L20 25l-5.5-5.5C12.5 12 14.5 5.5 20 1z M20 10.5a3 3 0 1 0 0 6 3 3 0 1 0 0-6z" />
+					<path fill="currentColor" d="M13.6 20.5 7 27l7.2-1.6zM26.4 20.5 33 27l-7.2-1.6z" />
+					<path fill="currentColor"
+						d="M20 30c1.8 1.6 2.6 4 2.2 6.5L20 39l-2.2-2.5C17.4 31.6 18.2 31.6 20 30z" />
+				</symbol>
+				<symbol id="chart" viewBox="0 0 40 40">
+					<path d="M6 34 L34 34 M6 34 L6 8" fill="none" stroke="currentColor" stroke-width="2"
+						stroke-linecap="round" />
+					<rect x="11" y="22" width="4" height="10" fill="currentColor" />
+					<rect x="18" y="16" width="4" height="16" fill="currentColor" />
+					<rect x="25" y="10" width="4" height="22" fill="currentColor" />
+				</symbol>
+				<symbol id="bulb" viewBox="0 0 40 40">
+					<path
+						d="M20 5 C 13 5 9 10 9 16 C 9 20 11 23 14 25 L 14 28 L 26 28 L 26 25 C 29 23 31 20 31 16 C 31 10 27 5 20 5 Z M15 31 L25 31 M16 34 L24 34"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						stroke-linejoin="round" />
+					<path d="M20 13 L20 21 M16 17 L24 17" fill="none" stroke="currentColor" stroke-width="1.5"
+						stroke-linecap="round" />
+				</symbol>
+				<symbol id="target" viewBox="0 0 40 40">
+					<circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="2" />
+					<circle cx="20" cy="20" r="9" fill="none" stroke="currentColor" stroke-width="2" />
+					<circle cx="20" cy="20" r="4" fill="currentColor" />
+					<path d="M20 3 L20 8 M20 32 L20 37 M3 20 L8 20 M32 20 L37 20" fill="none" stroke="currentColor"
+						stroke-width="2" stroke-linecap="round" />
+				</symbol>
+			</defs>
+		</svg>
 
 		<!-- ================= HEADER / NAV ================= -->
 		<header class="site-header">
@@ -76,33 +101,53 @@
 		<main id="top">
 
 			<!-- ================= HERO ================= -->
-			<section class="hero">
+			<section class="hero" id="about">
 				<div class="deco" aria-hidden="true">
-  <svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>
-  <svg class="gear g2" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>
-</div>
+					<svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+						<use href="#gear" />
+					</svg>
+					<svg class="gear g2" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+						<use href="#gear" />
+					</svg>
+				</div>
 				<div class="container hero-grid">
 					<div class="hero-copy">
 						<p class="eyebrow">Clemson Build presents · Start your engines</p>
-<div class="engine-lockup">
-  <svg class="pistons" viewBox="0 0 300 92" aria-hidden="true" focusable="false">
-  <g><rect class="rod" x="56" y="36" width="9" height="56" rx="3"/><rect class="head" x="36" y="16" width="49" height="22" rx="5"/><rect class="ring" x="36" y="22" width="49" height="3.5"/><rect class="ring r2" x="36" y="29" width="49" height="3.5"/></g>
-  <g><rect class="rod" x="146" y="24" width="9" height="68" rx="3"/><rect class="head" x="126" y="4" width="49" height="22" rx="5"/><rect class="ring" x="126" y="10" width="49" height="3.5"/><rect class="ring r2" x="126" y="17" width="49" height="3.5"/></g>
-  <g><rect class="rod" x="236" y="30" width="9" height="62" rx="3"/><rect class="head" x="216" y="10" width="49" height="22" rx="5"/><rect class="ring" x="216" y="16" width="49" height="3.5"/><rect class="ring r2" x="216" y="23" width="49" height="3.5"/></g>
-</svg>
-  <div class="engine-plate">
-    <span class="bolt b1"></span><span class="bolt b2"></span><span class="bolt b3"></span><span class="bolt b4"></span>
-    <h1>IGNITION<span class="dot">.</span></h1>
-  </div>
-  <svg class="exhaust" viewBox="0 0 210 64" aria-hidden="true" focusable="false">
-  <rect class="pipe" x="0" y="22" width="118" height="16" rx="8"/>
-  <rect class="pipe" x="104" y="16" width="64" height="30" rx="15"/>
-  <rect class="pipe" x="162" y="24" width="24" height="14" rx="7"/>
-  <circle class="puff p1" cx="198" cy="31" r="5"/>
-  <circle class="puff p2" cx="204" cy="22" r="7"/>
-  <circle class="puff p3" cx="203" cy="41" r="6"/>
-</svg>
-</div>
+						<div class="engine-lockup">
+							<svg class="pistons" viewBox="0 0 300 92" aria-hidden="true" focusable="false">
+								<g>
+									<rect class="rod" x="56" y="36" width="9" height="56" rx="3" />
+									<rect class="head" x="36" y="16" width="49" height="22" rx="5" />
+									<rect class="ring" x="36" y="22" width="49" height="3.5" />
+									<rect class="ring r2" x="36" y="29" width="49" height="3.5" />
+								</g>
+								<g>
+									<rect class="rod" x="146" y="24" width="9" height="68" rx="3" />
+									<rect class="head" x="126" y="4" width="49" height="22" rx="5" />
+									<rect class="ring" x="126" y="10" width="49" height="3.5" />
+									<rect class="ring r2" x="126" y="17" width="49" height="3.5" />
+								</g>
+								<g>
+									<rect class="rod" x="236" y="30" width="9" height="62" rx="3" />
+									<rect class="head" x="216" y="10" width="49" height="22" rx="5" />
+									<rect class="ring" x="216" y="16" width="49" height="3.5" />
+									<rect class="ring r2" x="216" y="23" width="49" height="3.5" />
+								</g>
+							</svg>
+							<div class="engine-plate">
+								<span class="bolt b1"></span><span class="bolt b2"></span><span
+									class="bolt b3"></span><span class="bolt b4"></span>
+								<h1>IGNITION<span class="dot">.</span></h1>
+							</div>
+							<svg class="exhaust" viewBox="0 0 210 64" aria-hidden="true" focusable="false">
+								<rect class="pipe" x="0" y="22" width="118" height="16" rx="8" />
+								<rect class="pipe" x="104" y="16" width="64" height="30" rx="15" />
+								<rect class="pipe" x="162" y="24" width="24" height="14" rx="7" />
+								<circle class="puff p1" cx="198" cy="31" r="5" />
+								<circle class="puff p2" cx="204" cy="22" r="7" />
+								<circle class="puff p3" cx="203" cy="41" r="6" />
+							</svg>
+						</div>
 						<p class="hero-tag">The Clemson Build Pitch Competition</p>
 						<p class="hero-sub">
 							One room. Real businesses. Live pitches. Clemson's student founders
@@ -133,35 +178,48 @@
 			<!-- ================= HOW IT WORKS ================= -->
 			<section class="section" id="how">
 				<div class="deco" aria-hidden="true">
-				  <svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>
+					<svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+						<use href="#gear" />
+					</svg>
 				</div>
 				<div class="container">
-					<p class="section-eyebrow"><svg class="eg" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>How it works</p>
+					<p class="section-eyebrow"><svg class="eg" viewBox="0 0 100 100" aria-hidden="true"
+							focusable="false">
+							<use href="#gear" />
+						</svg>How it works</p>
 					<h2>The ignition sequence</h2>
 					<div class="steps">
 						<article class="step-card">
-							<svg class="step-gear" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>
+							<svg class="step-gear" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+								<use href="#gear" />
+							</svg>
 							<div class="step-num">01</div>
 							<h3>Apply</h3>
 							<p>Submit your application through our Paperform by <strong>September 15</strong>. Real
 								businesses only — revenue, users, traction, or a working product.</p>
 						</article>
 						<article class="step-card">
-							<svg class="step-gear" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>
+							<svg class="step-gear" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+								<use href="#gear" />
+							</svg>
 							<div class="step-num">02</div>
 							<h3>Get confirmed</h3>
-							<p>Spots are limited and reviewed on a rolling basis. Confirmed founders get their pitch
-								slot and event details by email.</p>
+							<p>Spots are limited. Confirmed founders get their pitch
+								slot and event details by email end of day September 16.</p>
 						</article>
 						<article class="step-card">
-							<svg class="step-gear" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>
+							<svg class="step-gear" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+								<use href="#gear" />
+							</svg>
 							<div class="step-num">03</div>
 							<h3>Pitch live</h3>
 							<p>Take the stage at Tillman Hall on <strong>September 18</strong>, 3–6 PM. Cofounders are
 								encouraged to present together.</p>
 						</article>
 						<article class="step-card">
-							<svg class="step-gear" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>
+							<svg class="step-gear" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+								<use href="#gear" />
+							</svg>
 							<div class="step-num">04</div>
 							<h3>Win</h3>
 							<p>The winner takes the $1K+ prize pool. It's equity-free — you keep 100% of
@@ -174,11 +232,16 @@
 			<!-- ================= ABOUT THE CLUB ================= -->
 			<section class="section section-card" id="club">
 				<div class="deco" aria-hidden="true">
-				  <svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>
+					<svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+						<use href="#gear" />
+					</svg>
 				</div>
 				<div class="container club-grid">
 					<div>
-						<p class="section-eyebrow"><svg class="eg" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>The club behind it</p>
+						<p class="section-eyebrow"><svg class="eg" viewBox="0 0 100 100" aria-hidden="true"
+								focusable="false">
+								<use href="#gear" />
+							</svg>The club behind it</p>
 						<h2>Clemson Build</h2>
 						<p>
 							Clemson Build is a student-run entrepreneurship community at Clemson
@@ -192,7 +255,8 @@
 							possible for anyone.
 						</p>
 						<div class="club-links">
-							<a class="btn btn-outline" href="mailto:clemsonbuild@clemson.edu">clemsonbuild@clemson.edu</a>
+							<a class="btn btn-outline"
+								href="mailto:clemsonbuild@clemson.edu">clemsonbuild@clemson.edu</a>
 						</div>
 					</div>
 					<aside class="club-facts">
@@ -215,13 +279,18 @@
 			<!-- ================= COMPETITORS ================= -->
 			<section class="section" id="competitors">
 				<div class="deco" aria-hidden="true">
-				  <svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>
+					<svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+						<use href="#gear" />
+					</svg>
 				</div>
 				<div class="container">
-					<p class="section-eyebrow"><svg class="eg" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>The starting grid</p>
+					<p class="section-eyebrow"><svg class="eg" viewBox="0 0 100 100" aria-hidden="true"
+							focusable="false">
+							<use href="#gear" />
+						</svg>The starting grid</p>
 					<h2>Meet the competitors</h2>
-					<p class="section-sub">The student founders taking the stage on September 18. Spots fill on a
-						rolling basis — yours could be next.</p>
+					<p class="section-sub">The student founders taking the stage on September 18. Showcased by end
+						of September 16th.</p>
 					<!-- Cards are rendered from the COMPETITORS array in script.js -->
 					<div class="team-grid" id="teamGrid" aria-live="polite"></div>
 				</div>
@@ -230,49 +299,94 @@
 			<!-- ================= JUDGING ================= -->
 			<section class="section section-dark" id="judging">
 				<div class="deco" aria-hidden="true">
-				  <svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>
-				  <svg class="gear g2" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>
+					<svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+						<use href="#gear" />
+					</svg>
+					<svg class="gear g2" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+						<use href="#gear" />
+					</svg>
 				</div>
 				<div class="container">
-					<p class="section-eyebrow light"><svg class="eg" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>Judging criteria</p>
+					<p class="section-eyebrow light"><svg class="eg" viewBox="0 0 100 100" aria-hidden="true"
+							focusable="false">
+							<use href="#gear" />
+						</svg>Judging criteria</p>
 					<h2>What the judges score</h2>
-					<p class="section-sub light">Every pitch is evaluated live by our judge panel on three pillars.</p>
-					<div class="criteria">
+					<p class="section-sub light">Every pitch is evaluated live by our judge panel on five categories.
+					</p>
+					<div class="criteria criteria-five">
 						<article class="criterion">
-							<div class="crit-icon"><svg class="crit-svg spin-slow" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg></div>
+							<div class="crit-icon"><svg class="crit-svg spin-slow" viewBox="0 0 100 100"
+									aria-hidden="true" focusable="false">
+									<use href="#gear" />
+								</svg></div>
 							<h3>Traction</h3>
-							<p>Proof it's real: customers, revenue, active users, or a working product already in the
-								world. We reward progress, not promises.</p>
+							<p>Show us it's real. Customers, revenue, active users, or a working product people actually
+								use. Progress beats promises.</p>
 						</article>
 						<article class="criterion">
-							<div class="crit-icon"><svg class="crit-svg" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><use href="#spark"/></svg></div>
-							<h3>Clarity of story</h3>
-							<p>The problem, the insight, and why your team wins — told sharp enough to repeat. Judges
-								score how clearly the business comes through.</p>
+							<div class="crit-icon"><svg class="crit-svg" viewBox="0 0 40 40" aria-hidden="true"
+									focusable="false">
+									<use href="#spark" />
+								</svg></div>
+							<h3>Presentation</h3>
+							<p>Clear and confident delivery. Tell the story so the room gets it: hook, problem, what
+								you've built. Cofounders can share the stage.</p>
 						</article>
 						<article class="criterion">
-							<div class="crit-icon"><svg class="crit-svg" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><use href="#rocket"/></svg></div>
-							<h3>Potential impact</h3>
-							<p>Where it goes from here: the market, the growth path, and what a win unlocks for the
-								venture and the community around it.</p>
+							<div class="crit-icon"><svg class="crit-svg" viewBox="0 0 40 40" aria-hidden="true"
+									focusable="false">
+									<use href="#chart" />
+								</svg></div>
+							<h3>Specificity</h3>
+							<p>Know your business, show us you do. Real numbers, real customers, real details. Vague
+								beats nothing — specifics beat vague.</p>
+						</article>
+						<article class="criterion">
+							<div class="crit-icon"><svg class="crit-svg" viewBox="0 0 40 40" aria-hidden="true"
+									focusable="false">
+									<use href="#bulb" />
+								</svg></div>
+							<h3>Innovation</h3>
+							<p>What makes you different from what's out there. Your edge: the insight, feature, or
+								approach others don't have.</p>
+						</article>
+						<article class="criterion">
+							<div class="crit-icon"><svg class="crit-svg" viewBox="0 0 40 40" aria-hidden="true"
+									focusable="false">
+									<use href="#target" />
+								</svg></div>
+							<h3>Practicality</h3>
+							<p>Define and defend your business model. How it makes money, what it costs to run, and what
+								happens next.</p>
 						</article>
 					</div>
-					<p class="criteria-note">Final rubric and weights are announced at the event. Bring your cofounders
-						— teams that tell the story together score together.</p>
+					<p class="criteria-note">
+						<a class="rubric-link"
+							href="https://efficient-delivery-37d.notion.site/Judging-Rubric-356a29c098a98002ae3eff4fc9fd6e0c?source=copy_link"
+							target="_blank" rel="noopener">Judging Rubric</a> - Review the full rubric with
+						point descriptions before you pitch. Bring your cofounders. Pitch as a team.
+					</p>
 				</div>
 			</section>
 
 			<!-- ================= FLYER ================= -->
 			<section class="section" id="flyer">
 				<div class="container flyer-wrap">
-					<p class="section-eyebrow"><svg class="eg" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>Promotional flyer</p>
+					<p class="section-eyebrow"><svg class="eg" viewBox="0 0 100 100" aria-hidden="true"
+							focusable="false">
+							<use href="#gear" />
+						</svg>Promotional flyer</p>
 					<h2>Spread the word</h2>
 					<p class="section-sub">Post it, print it, send it to a founder who should be in the room.</p>
 					<div class="flyer-frame">
-						<img src="flyer/flyer-print.png" alt="Ignition flyer — Clemson Build Pitch Competition, with application and RSVP QR codes" loading="lazy" />
+						<img src="flyer/flyer-print.png"
+							alt="Ignition flyer — Clemson Build Pitch Competition, with application and RSVP QR codes"
+							loading="lazy" />
 					</div>
 					<div class="flyer-actions">
-						<a class="btn btn-primary" href="flyer/flyer-print.png" download="ignition-pitch-competition-flyer.png">Download PNG</a>
+						<a class="btn btn-primary" href="flyer/flyer-print.png"
+							download="ignition-pitch-competition-flyer.png">Download PNG</a>
 						<a class="btn btn-ghost" href="flyer/flyer.html" target="_blank" rel="noopener">Open print
 							version (8.5×11)</a>
 					</div>
@@ -283,32 +397,38 @@
 			<section class="section" id="apply">
 				<div class="container">
 					<div class="apply-card">
-						<svg class="gauge" viewBox="0 0 200 126" role="img" aria-label="Tachometer reading high — applications close September 15">
-						  <circle class="g-face" cx="100" cy="104" r="90"/>
-						  <path class="g-track" d="M22 104 A78 78 0 0 1 178 104"/>
-						  <path class="g-arc" d="M22 104 A78 78 0 0 1 155 48.8"/>
-						  <path class="g-hot" d="M155 48.8 A78 78 0 0 1 178 104"/>
-						  <line class="g-tick" x1="30" y1="104" x2="22" y2="104"/>
-						  <line class="g-tick" x1="100" y1="34" x2="100" y2="26"/>
-						  <line class="g-tick" x1="170" y1="104" x2="178" y2="104"/>
-						  <text class="g-label" x="100" y="76">RPM</text>
-						  <line class="g-needle" x1="100" y1="104" x2="149" y2="59.8"/>
-						  <circle class="g-cap" cx="100" cy="104" r="10"/>
-						  <circle class="g-cap-dot" cx="100" cy="104" r="3.5"/>
+						<svg class="gauge" viewBox="0 0 200 126" role="img"
+							aria-label="Tachometer reading high — applications close September 15">
+							<circle class="g-face" cx="100" cy="104" r="90" />
+							<path class="g-track" d="M22 104 A78 78 0 0 1 178 104" />
+							<path class="g-arc" d="M22 104 A78 78 0 0 1 155 48.8" />
+							<path class="g-hot" d="M155 48.8 A78 78 0 0 1 178 104" />
+							<line class="g-tick" x1="30" y1="104" x2="22" y2="104" />
+							<line class="g-tick" x1="100" y1="34" x2="100" y2="26" />
+							<line class="g-tick" x1="170" y1="104" x2="178" y2="104" />
+							<text class="g-label" x="100" y="76">RPM</text>
+							<line class="g-needle" x1="100" y1="104" x2="149" y2="59.8" />
+							<circle class="g-cap" cx="100" cy="104" r="10" />
+							<circle class="g-cap-dot" cx="100" cy="104" r="3.5" />
 						</svg>
 						<p class="gauge-caption">Tach check — applications close <strong>September 15</strong></p>
 						<h2>Ready to pitch?</h2>
 						<p>
-							Applications close <strong>September 15</strong> and are reviewed on a
-							rolling basis — earlier is better. Open to all Clemson student
+							Applications close <strong>September 15</strong>. Open to all Clemson student
 							founders and their cofounders.
 						</p>
 						<div class="apply-ctas">
-							<a class="btn btn-dark btn-lg" data-apply href="#top">Apply to Pitch →</a>
-							<a class="btn btn-outline-dark btn-lg" data-rsvp href="#top">RSVP to spectate</a>
+							<a class="btn btn-dark btn-lg" data-apply href="https://zs7crkyp.paperform.co/">Apply to
+								Pitch →</a>
+							<a class="btn btn-outline-dark btn-lg" data-rsvp
+								href="https://tinyurl.com/IgnitionComp">RSVP to spectate</a>
 						</div>
 						<p class="apply-note">Not pitching yet? Come watch, meet the founders, and find a team to build
 							with.</p>
+						<p class="apply-note">Before you apply, see exactly how you'll be scored — <a
+								class="rubric-link-dark"
+								href="https://efficient-delivery-37d.notion.site/Judging-Rubric-356a29c098a98002ae3eff4fc9fd6e0c?source=copy_link"
+								target="_blank" rel="noopener">read the full Judging Rubric</a>.</p>
 					</div>
 				</div>
 			</section>
@@ -316,15 +436,20 @@
 			<!-- ================= FAQ ================= -->
 			<section class="section section-card" id="faq">
 				<div class="deco" aria-hidden="true">
-				  <svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>
+					<svg class="gear g1" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+						<use href="#gear" />
+					</svg>
 				</div>
 				<div class="container container-narrow">
-					<p class="section-eyebrow"><svg class="eg" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#gear"/></svg>FAQ</p>
+					<p class="section-eyebrow"><svg class="eg" viewBox="0 0 100 100" aria-hidden="true"
+							focusable="false">
+							<use href="#gear" />
+						</svg>FAQ</p>
 					<h2>Quick answers</h2>
 					<details>
 						<summary>Who can pitch?</summary>
 						<p>Any currently enrolled Clemson University student founder and their cofounders. All majors
-							welcome — builders, not just ideas.</p>
+							welcome.</p>
 					</details>
 					<details>
 						<summary>What counts as a "real" business?</summary>
