@@ -196,6 +196,82 @@ h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); margin-bottom: 0.5em; }
 .step-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--purple-deep); }
 .step-card p { font-size: 0.93rem; }
 
+/* ---------------- Pitch format / schedule ---------------- */
+.schedule {
+  list-style: none;
+  counter-reset: schedule;
+  display: grid;
+  gap: 1rem;
+  margin: 0 0 1.6rem;
+  padding: 0;
+}
+.schedule-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.2rem;
+  align-items: stretch;
+  counter-increment: schedule;
+  position: relative;
+}
+.schedule-time {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.9rem;
+  background: var(--purple);
+  color: var(--beige);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  box-shadow: var(--shadow);
+}
+.schedule-row.break .schedule-time {
+  background: var(--orange-deep);
+  color: var(--cream);
+}
+.schedule-card {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--orange);
+  position: relative;
+}
+.schedule-row.break .schedule-card {
+  border-top-color: var(--purple);
+  background: rgba(241, 237, 228, 0.55);
+}
+.schedule-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+  color: var(--purple-deep);
+}
+.schedule-card p {
+  font-size: 0.95rem;
+  color: var(--ink);
+  opacity: 0.85;
+}
+.schedule-note {
+  margin-top: 1.4rem;
+  font-size: 1rem;
+  color: var(--ink);
+}
+.schedule-note a {
+  color: var(--purple-deep);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--orange);
+}
+.schedule-note a:hover { color: var(--orange-deep); }
+
+@media (max-width: 640px) {
+  .schedule-row { grid-template-columns: 1fr; gap: 0.6rem; }
+  .schedule-time { justify-self: start; }
+}
+
 /* ---------------- Club ---------------- */
 .club-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: start; }
 .club-grid p { margin-bottom: 1rem; max-width: 40rem; }
